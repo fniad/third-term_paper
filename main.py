@@ -1,6 +1,7 @@
 import os
-from utils.utils import load_operations
+from utils.operations_on_accounts import get_the_last_five_transactions
 
 OPERATIONS_DATA_PATH = os.path.join('data/operations.json')
 
-print(load_operations(OPERATIONS_DATA_PATH))
+print(get_the_last_five_transactions(OPERATIONS_DATA_PATH))
+

@@ -42,5 +42,7 @@ def load_operations(path):
             list_operation.append(operation)
 
     sorted_operation = sorted(list_operation, key=lambda Operation: Operation.data_operation, reverse=True)
-
     return sorted_operation
+
+
+
