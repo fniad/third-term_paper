@@ -26,8 +26,6 @@ def load_operations(path):
     for operation in operation_data:
         if not operation:  # проверяем, что словарь не пустой
             continue
-        if operation.get('state') != "EXECUTED":
-            continue
         try:
             operation = Operation(
                 data_operation=operation.get('date'),
