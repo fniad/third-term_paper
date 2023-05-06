@@ -2,6 +2,8 @@ from utils.load_json_util import load_operations
 
 
 def get_the_last_five_transactions(path):
+    """ Возвращает пять операций из списка операций """
+
     operation_list = load_operations(path)
 
     five_transaction = ""
