@@ -1,5 +1,6 @@
 import json
 import os
+
 from data.operations import Operation
 
 
@@ -26,8 +27,6 @@ def load_operations(path):
     for operation in operation_data:
         if not operation:  # проверяем, что словарь не пустой
             continue
-        if operation.get('state') != "EXECUTED":
-            continue
         try:
             operation = Operation(
                 data_operation=operation.get('date'),
@@ -44,3 +43,6 @@ def load_operations(path):
 
     sorted_operation = sorted(list_operation, key=lambda Operation: Operation.data_operation, reverse=True)
     return sorted_operation
+
+
+
