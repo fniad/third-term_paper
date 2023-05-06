@@ -1,6 +1,5 @@
 import json
 import os
-
 from data.operations import Operation
 
 
@@ -43,6 +42,3 @@ def load_operations(path):
 
     sorted_operation = sorted(list_operation, key=lambda Operation: Operation.data_operation, reverse=True)
     return sorted_operation
-
-
-
